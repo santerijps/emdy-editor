@@ -1,0 +1,3 @@
+- Editor view is larger than 100% of the parent height (there's a scroll bar)
+- If i.e. bold in the selection, toggle it off instead.
+- highlightSelectionMatches?
