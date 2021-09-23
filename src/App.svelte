@@ -5,6 +5,12 @@
 </script>
 
 
+<svelte:head>
+    <link rel="stylesheet" href="/dist/css/bootstrap.min.css">
+    <script src="/dist/js/bootstrap.bundle.min.js"></script>
+</svelte:head>
+
+
 <div class="h-100 d-flex flex-column">
 
     <nav class="p-3">

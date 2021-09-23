@@ -61,6 +61,7 @@
     // Svelte imports
 
     import { onMount } from "svelte"
+    import { CursorStore, EditorStore, TokenStore } from "./emdy-stores"
 
 
     //
@@ -119,6 +120,15 @@
             value = editor.getValue()
         })
 
+        editor.on("cursorActivity", () => {
+            const doc = editor.getDoc()
+            const cursor = doc.getCursor()
+            const type = editor.getTokenTypeAt(cursor)
+            const token = type ? type.split(" ") : []
+            TokenStore.set(token)
+            CursorStore.set(cursor)
+        })
+
         editor.on("drop", async (_, event) => {
             const { dataTransfer: {items: {0: item}} } = event
             const mode = CodeMirror.findModeByMIME(item.type)
@@ -128,7 +138,7 @@
         })
 
         editor.setOption("value", value)
-
+        EditorStore.set(editor)
     })
 
 </script>
@@ -186,7 +196,7 @@
 
 <style>
 
-    div {
+    #editor-wrapper {
         height: 100%;
         width: 100%;
         word-wrap: break-word;
