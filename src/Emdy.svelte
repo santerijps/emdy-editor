@@ -14,7 +14,7 @@
 
     $: editorClass = $ViewStore === VIEW.PREVIEW ? "d-none" : $ViewStore === VIEW.EDITOR ? "ps-2 flex-fill overflow-hidden" : "col-5 mx-0 px-0 ps-2 border-end border-light border-3"
     $: previewClass = $ViewStore === VIEW.PREVIEW ? "p-4 mx-auto" : $ViewStore === VIEW.EDITOR ? "d-none" : "col-7 mx-0 pt-2 px-5"
-    $: previewStyle = $ViewStore === VIEW.PREVIEW && `width: ${previewWidth}%;`
+    $: previewStyle = $ViewStore === VIEW.PREVIEW ? `width: ${previewWidth}%;` : undefined
 
 </script>
 

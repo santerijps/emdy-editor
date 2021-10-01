@@ -20,7 +20,7 @@
 </script>
 
 
-<nav id="emdy-toolbar" class="row mx-0 p-2 border-bottom border-light border-3" style="background: ghostwhite;">
+<nav id="emdy-toolbar" class="row mx-0 p-2 border-bottom border-light border-3 sticky-top" style="background: ghostwhite;">
 
     <div class="col-1">
         <a href="https://www.markdownguide.org/basic-syntax/" class="btn shadow-none toolbar-button" target="_blank" title="Get Help" style="color: teal;">
